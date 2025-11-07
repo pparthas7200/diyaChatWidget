@@ -13,8 +13,8 @@ export default function ChatboxWidget() {
     setLoading(true);
     setMessages([...messages, { role: 'user', text: query }]);
     try {
-      //const res = await fetch('http://localhost:8000/chat', {
-      const res = await fetch('https://diyasmartchatbot.onrender.com', {
+      //const res = await fetch('https://diyasmartchatbot.onrender.com', {
+      const res = await fetch('http://localhost:8000/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question: query }),
