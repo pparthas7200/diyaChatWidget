@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { Input } from '../src/ui/input';
+import { Button } from '../src/ui/button';
+import { Card, CardContent } from '../src/ui/card';
 
 export default function ChatboxWidget() {
   const [query, setQuery] = useState('');
