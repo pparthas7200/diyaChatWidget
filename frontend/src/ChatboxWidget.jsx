@@ -17,7 +17,7 @@ export default function ChatboxWidget() {
       const res = await fetch('http://localhost:8000/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question: quera, session_id: "user-session-id" }),
+        body: JSON.stringify({ question: query, session_id: "user-session-id" }),
       });
       const data = await res.json();
       setMessages(prev => [...prev, { role: 'bot', text: data.answer }]);
